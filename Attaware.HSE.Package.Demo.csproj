@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 <PropertyGroup>
-	<AssemblyName>Attaware.HSE.Package.Standard</AssemblyName>
+	<AssemblyName>Attaware.HSE.Package.Demo</AssemblyName>
   <Version>1.2.0</Version>
 </PropertyGroup>
   <PropertyGroup>
