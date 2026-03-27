@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+<PropertyGroup>
+	<AssemblyName>Attaware.HSE.Package.Standard</AssemblyName>
+  <Version>1.2.0</Version>
+</PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+ 
+  <ItemGroup>
+ 
+    <Compile Remove="%40hse\**" />
+ 
+    <Compile Remove="hse_assets\**" />
+ 
+    <EmbeddedResource Remove="%40hse\**" />
+
+    <EmbeddedResource Remove="hse_assets\**" />
+
+    <None Remove="%40hse\**" />
+
+    <None Remove="hse_assets\**" />
+     
+  </ItemGroup>
+
+	<!-- this works fine for me because i own hse core project  -->
+	<!--  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Attaware.HSE.Core\Attaware.HSE.Core.csproj" />
+  </ItemGroup>
+-->
+	
+	<!-- But this is the safe way to do it  IF we want to .csproj install -->
+	<ItemGroup>
+		<PackageReference Include="Attaware.HSE.Core" Version="1.0.0" />
+	</ItemGroup>
+</Project>
